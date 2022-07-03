@@ -1,12 +1,8 @@
 #!/bin/sh
 clear
 echo "INICIANDO"
-pip install pymongo
+pip3 install pymongo
 apt update python3.10
-
-echo "aqui codigo para actualizar datos"
-
-
 sudo apt update
 sudo apt -y upgrade
 wget -P ~/Downloads/ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -17,12 +13,13 @@ unzip chromedriver_linux64
 sudo mv chromedriver /usr/local/share/chromedriver
 sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
-sudo pip3 install selenium
-sudo pip3 install webdriver-manager
-sudo pip3 install pymongo
-sudo pip3 install "pymongo[srv]"
-
+pip3 install selenium
+pip3 install webdriver-manager
+pip3 install pymongo
+pip3 install "pymongo[srv]"
 pip3 freeze
 whereis chromedriver
 whereis google-chrome
+echo "AQUI ACTUALIZA LA DB MONGODB"
+ECHO "TODO OK"
 exit
